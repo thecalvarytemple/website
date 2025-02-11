@@ -8,7 +8,7 @@
 
 <div class="container mx-auto d-flex align-items-center">
     <!-- Left-side menu for larger screens -->
-    <div class="col-sm-2 col-md-2 d-none d-sm-block">
+    <div class="col-sm-3 col-md-3 d-none d-sm-block">
       <nav class="readings-menu">
         <ul class="nav-menu">
           {{ $currentPage := . }}
@@ -24,9 +24,8 @@
       </nav>
     </div>
 
-    <div class="col-sm-1 col-md-1"></div>
     <!-- Main content area -->
-    <div class="col-sm-9 col-md-9">
+    <div class="col-sm-9 col-md-6 offset-md-1">
       <!-- Tabbed menu for phones -->
       <div class="col-12 d-block d-sm-none mb-4">
         <nav class="tabbed-menu">

@@ -7,7 +7,7 @@ resources:
 - src: bible.jpg
 ---
 
-<h4 style="text-align:center;">Amplified Version</h4>
+<h5 style="text-align:center">Amplified Version</h5>
 
 
 1. Genesis 1-2:17, Matthew 1, Psalms 1

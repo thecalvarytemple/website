@@ -1,9 +1,9 @@
 backend:
   name: github
-  branch: master
-  repo: virtuallyanadmi/tct
+  branch: main
+  repo: thecalvarytemple/website
   client_id: 'Ov23liA2teaycARJnQgO'
-  base_url: 'https://tct.virtuallyanadmin.com'
+  base_url: 'https://thecalvarytemple.org'
   auth_endpoint: /api/auth
 media_folder: "static/img/uploads"
 public_folder: "/img/uploads"

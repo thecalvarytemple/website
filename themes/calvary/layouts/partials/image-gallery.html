@@ -6,18 +6,17 @@
     .image-gallery li a img {width: 100%; display: block;}
 </style>
 
-
 <ul class="image-gallery">
-{{ range .Page.Resources.ByType "image" }}
-  {{- $image := resources.Get (printf "%s/%s" .Name) -}}
-  {{- $imageurl := printf "%s/%s" .Name -}}
-  {{- $imagetitle := index (split .Name ".") 0 -}}
+{{ $folder := .folder | default .Site.Params.defaultImageFolder }}
+{{ range (resources.Match (printf "%s/*" $folder)).ByType "image" }}
+  {{- $image := . -}}
+  {{- $imageurl := $image.Permalink -}}
+  {{- $imagetitle := index (split $image.Name ".") 0 -}}
     <li>
       <a href="{{ ($image.Fit "1600x1600 q50").Permalink }}" title="{{ $imagetitle }}" class="lightbox-image">
         <img src="{{ ($image.Fill "300x300 q50").Permalink }}" alt="{{ $imagetitle }}" title="{{ $imagetitle }}">
         <span>{{ $imagetitle }}</span>
       </a>
     </li>
-  
 {{ end }}
 </ul>

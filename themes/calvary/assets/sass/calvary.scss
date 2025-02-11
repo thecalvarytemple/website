@@ -666,6 +666,12 @@ ul.footer-menu ul li {
   white-space: nowrap;
 }
 
+.container-90 {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
 @import 'events';
 @import 'beliefs';
 @import 'messages';
