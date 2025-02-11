@@ -1,7 +1,7 @@
 ---
 date: "2017-01-01"
 title: "Hospitality"
-email: "calvarytemplestcharles@gmail.com"
+email: "info@thecalvarytemple.org"
 weight: 90
 resources:
 - name: header

@@ -2,7 +2,7 @@
 date: "2017-01-01"
 title: "Worship"
 leader: "Pastor Scott"
-email: "calvarytemplestcharles@gmail.com"
+email: "info@thecalvarytemple.org"
 weight: 100
 resources:
 - name: header

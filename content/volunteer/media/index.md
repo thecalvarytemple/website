@@ -1,7 +1,7 @@
 ---
 date: "2017-01-01"
 title: "Media"
-email: "calvarytemplestcharles@gmail.com"
+email: "info@thecalvarytemple.org"
 weight: 50
 resources:
 - name: header

@@ -2,7 +2,7 @@
 date: "2017-01-01"
 title: "Prayer"
 leader: "Pastor Marcia"
-email: "calvarytemplestcharles@gmail.com"
+email: "info@thecalvarytemple.org"
 weight: 70
 resources: 
 - name: header

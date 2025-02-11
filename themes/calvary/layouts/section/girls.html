@@ -1,29 +1,33 @@
 {{ partial "content-header.html" . }}
 
-<div class="col-sm-12 col-md-8 col-sm-offset-0 col-md-offset-2">
-
-{{ .Content }}
-
-</div>
-
-{{ range $i,$p := .Data.Pages }}
-  {{ if modBool $i 2 }}
-     <div class="col-sm-12 col-md-5 col-md-offset-1 gallery">
-  {{ else }}
-     <div class="col-sm-12 col-md-5 gallery">
-  {{ end }}
-    <h2>{{ .Title }}</h2> 
-    {{ range .Resources.Match "photo" }}
-      <img src="{{ .RelPermalink }}" style="max-width: 100%; margin-bottom: 20px;" />
-    {{ end }}
-    <p>{{ .Content }}</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 offset-md-2">
+      {{ .Content }}
+    </div>
   </div>
-{{ end }}
 
-<div class="col-sm-12 col-md-8 col-sm-offset-0 col-md-offset-2" align="center">
-<br />
-<p style="margin-bottom: 0px;">If you'd like more information about Girls Ministries, email <a href="mailto:calvarytemplestcharles@gmail.com">calvarytemplestcharles@gmail.com</a>.</p>
+  <div class="row">
+    {{ range $i, $p := .Data.Pages }}
+      <div class="col-sm-12 col-md-6 gallery">
+        <h2>{{ .Title }}</h2>
+        {{ range .Resources.Match "photo" }}
+          <img src="{{ .RelPermalink }}" style="max-width: 100%; margin-bottom: 20px;" />
+        {{ end }}
+        <p>{{ .Content }}</p>
+      </div>
+      {{ if eq (mod (add $i 1) 2) 0 }}
+        </div><div class="row">
+      {{ end }}
+    {{ end }}
+  </div>
 
+  <div class="row">
+    <div class="col-sm-12 col-md-8 offset-md-2 text-center">
+      <br />
+      <p style="margin-bottom: 0px;">If you'd like more information about Girls Ministries, email <a href="mailto:info@thecalvarytemple.org">info@thecalvarytemple.org</a>.</p>
+    </div>
+  </div>
 </div>
 
 {{ partial "content-footer.html" . }}

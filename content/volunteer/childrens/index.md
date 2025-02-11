@@ -1,7 +1,7 @@
 ---
 date: "2017-01-01"
 title: CT Kids
-email: "calvarytemplestcharles@gmail.com"
+email: "info@thecalvarytemple.org"
 weight: 5
 resources:
 - name: header

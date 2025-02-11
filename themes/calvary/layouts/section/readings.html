@@ -1,41 +1,25 @@
 {{ partial "content-header.html" . }}
 
- <!-- Section (_index.md) content always shown at top -->
+<!-- Section (_index.md) content always shown at top -->
 <div class="container mx-auto mb-8">
   {{ with .Site.GetPage "section" "readings" }}
     {{ .Content }}
-    <H2 style="display: grid; place-items: center;">Please select a month from the list below</H2>
+    <h2 style="display: grid; place-items: center;">Please select a month from the list below</h2>
   {{ end }}
 </div>
 
-<div class="container mx-auto flex" style="display: grid; place-items: center;">
-  <!-- Left-side menu -->
-  <div class="col-sm col-md">
-    <nav class="readings-menu">
-      <ul class="nav-menu">
-        {{ $currentPage := . }}
-        {{ range .Pages.ByWeight }}
-          <li class="bullet-li">
-            <a href="{{ .RelPermalink }}" 
-               class="nav-link{{ if eq .RelPermalink $currentPage.RelPermalink }}active{{ end }}">
-              {{ .Title }}
-            </a>
-          </li>
-        {{ end }}
-      </ul>
-    </nav>
-  </div>
-
-  <!-- Main content area 
-  <div class="col-sm-10 col-md-10">
-    {{ if .IsSection }}
-      {{ with index .Pages.ByWeight 0 }}
-        {{ .Content }}
-      {{ end }}
-    {{ else }}
-      {{ .Content }}
+<div class="container mx-auto">
+  <!-- Month buttons -->
+  <div class="row">
+    {{ $currentPage := . }}
+    {{ range .Pages.ByWeight }}
+      <div class="col-sm-6 col-md-3 mb-4">
+        <a href="{{ .RelPermalink }}" class="btn btn-primary btn-oval{{ if eq .RelPermalink $currentPage.RelPermalink }} active{{ end }}">
+          {{ .Title }}
+        </a>
+      </div>
     {{ end }}
   </div>
-</div>-->
+</div>
 
 {{ partial "content-footer.html" . }}

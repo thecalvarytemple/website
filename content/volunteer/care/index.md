@@ -2,7 +2,7 @@
 date: "2017-01-01"
 title: "Care"
 leader: "Pastor Scott"
-email: "calvarytemplestcharles@gmail.com"
+email: "info@thecalvarytemple.org"
 weight: 10
 resources: 
 - name: header

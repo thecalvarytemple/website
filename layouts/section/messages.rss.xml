@@ -1,7 +1,7 @@
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
   <channel>
     <title>Calvary Temple</title>
-    <link>https://calvarytemple.org/</link>
+    <link>https://thecalvarytemple.org/</link>
     <language>en-us</language>
     <copyright>Copyright {{ now.Format "2006" }} Calvary Temple</copyright>
     <itunes:subtitle>Messages from Calvary Temple in St. Charles, Missouri</itunes:subtitle>

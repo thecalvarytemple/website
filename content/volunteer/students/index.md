@@ -2,7 +2,7 @@
 date: "2017-01-01"
 title: "Students"
 leader: "Pastor Isaiah"
-email: "calvarytemplestcharles@gmail.com"
+email: "info@thecalvarytemple.org"
 weight: 75
 resources:
 - name: header

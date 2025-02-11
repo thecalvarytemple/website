@@ -358,6 +358,21 @@ nav.readings-menu {
     color: #aaaaaa; /* Replace with the text color of the buttons in readings-menu */
 }
 
+.btn-oval {
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  background-color: #23527e; /* Replace with your desired background color */
+  color: #aaaaaa; /* Replace with your desired text color */
+  border: none;
+}
+
+.btn-oval.active {
+  background-color: #0056b3; /* Replace with your desired active background color */
+}
 .mast {
   display: flex;
   align-items: center;
