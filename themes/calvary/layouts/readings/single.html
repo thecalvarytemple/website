@@ -4,11 +4,11 @@
     {{ with .Site.GetPage "section" "readings" }}
       {{ .Content }}
     {{ end }}
-  </div>
+</div>
 
-  <div class="container mx-auto d-flex align-items-center">
-    <!-- Left-side menu -->
-    <div class="col-sm-2 col-md-2">
+<div class="container mx-auto d-flex align-items-center">
+    <!-- Left-side menu for larger screens -->
+    <div class="col-sm-2 col-md-2 d-none d-sm-block">
       <nav class="readings-menu">
         <ul class="nav-menu">
           {{ $currentPage := . }}
@@ -23,11 +23,28 @@
         </ul>
       </nav>
     </div>
-  <div class="col-sm-1 col-md-1"></div>
+
+    <div class="col-sm-1 col-md-1"></div>
     <!-- Main content area -->
     <div class="col-sm-9 col-md-9">
+      <!-- Tabbed menu for phones -->
+      <div class="col-12 d-block d-sm-none mb-4">
+        <nav class="tabbed-menu">
+          <ul class="nav nav-tabs">
+            {{ $currentPage := . }}
+            {{ range .Parent.Pages.ByWeight }}
+              <li class="nav-item">
+                <a href="{{ .RelPermalink }}" 
+                   class="nav-link {{ if eq .RelPermalink $currentPage.RelPermalink }}active{{ end }}">
+                  {{ .Title }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        </nav>
+      </div>
       {{ .Content }}
     </div>
-  </div>
+</div>
 
 {{ partial "content-footer.html" . }}

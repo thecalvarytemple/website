@@ -353,6 +353,11 @@ nav.readings-menu {
     }
   }
 
+.nav-tabs .nav-link.active {
+    background-color: #23527e; /* Replace with the color of the buttons in readings-menu */
+    color: #aaaaaa; /* Replace with the text color of the buttons in readings-menu */
+}
+
 .mast {
   display: flex;
   align-items: center;
