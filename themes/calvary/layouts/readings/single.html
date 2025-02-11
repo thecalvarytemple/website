@@ -1,0 +1,33 @@
+{{ partial "content-header.html" . }}
+
+<div class="container mx-auto mb-8">
+    {{ with .Site.GetPage "section" "readings" }}
+      {{ .Content }}
+    {{ end }}
+  </div>
+
+  <div class="container mx-auto d-flex align-items-center">
+    <!-- Left-side menu -->
+    <div class="col-sm-2 col-md-2">
+      <nav class="readings-menu">
+        <ul class="nav-menu">
+          {{ $currentPage := . }}
+          {{ range .Parent.Pages.ByWeight }}
+            <li class="nav-item">
+              <a href="{{ .RelPermalink }}" 
+                 class="nav-link {{ if eq .RelPermalink $currentPage.RelPermalink }}active{{ end }}">
+                {{ .Title }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
+  <div class="col-sm-1 col-md-1"></div>
+    <!-- Main content area -->
+    <div class="col-sm-9 col-md-9">
+      {{ .Content }}
+    </div>
+  </div>
+
+{{ partial "content-footer.html" . }}
