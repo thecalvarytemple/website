@@ -1,9 +1,15 @@
 {{ partial "content-header.html" . }}
 
 {{ range .Data.Pages.ByDate }}
-  <div class="message col-xs-12 col-md-8 col-md-offset-2">
-    {{ .Render "list" }}
+<div class="d-flex align-items-center justify-content-center">
+  <div class="container container-90">
+    <div class="row">
+      <div class="message">
+        {{ .Render "list" }}
+      </div>
+    </div>
   </div>
+</div>
 {{ end }}
 
 {{ partial "content-footer.html" . }}

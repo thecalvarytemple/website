@@ -2,8 +2,8 @@
 date: "2017-01-01"
 title: "Scott Mays"
 position: "Lead Pastor"
-email:
-emailname:
+email: revscott@thecalvarytemple.org
+emailname: "Pastor Scott"
 weight: 5
 resources:
 - name: photo

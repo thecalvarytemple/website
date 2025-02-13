@@ -2,8 +2,8 @@
 date: "2017-01-01"
 title: "Marcia Mays"
 position: "Lead Pastor"
-email:
-emailname:
+email: psmarcia@thecalvarytemple.org
+emailname: "Pastor Marcia"
 weight: 10
 resources:
 - name: photo

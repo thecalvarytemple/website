@@ -3,8 +3,8 @@ date: "2024-09-27"
 title: "Lindsay Asaro"
 position: "Administrative Assistant"
 weight: 20
-email: 
-emailname: 
+email: lindsay@thecalvarytemple.org
+emailname: Lindsay Asaro
 resources:
 - name: photo
   src: "lindsay.jpg"
