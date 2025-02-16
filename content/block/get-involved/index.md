@@ -14,6 +14,6 @@ resources:
 ---
 
 <div class="page-buttons">
-  <a href="groups/">{{< img-retina "groups" >}}</a>
+  <a href="groups/">{{< img-retina "groups.png" >}}</a>
 </div>
 

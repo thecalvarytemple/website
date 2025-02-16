@@ -1,9 +1,10 @@
-
 <div class="row detail">
   <div class="col-sm-7 col-md-7">
     <div class="photocell">
-      {{ $img := $.Page.Resources.GetMatch "header" }}
-      <img class="photo" src="{{ $img.RelPermalink }}">
+      {{ $imageCdn := .Site.Params.imageCDN }}
+      {{ if .Params.header }}
+        <img class="photo" src="{{ $imageCdn }}volunteer/{{ .Params.header }}">
+      {{ end }}
     </div>
   </div>
   <div class="col-sm-5 col-md-5">

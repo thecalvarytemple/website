@@ -5,7 +5,7 @@ weight: 25
 blockColor: "#307015"
 tagline: "Going together in Teams"
 image: "block-give.jpg"
-backdrop: hiking-senior-discount.jpg
+backdrop: give.jpg
 resources:
 - name: donate
   src: donate.png
@@ -14,6 +14,6 @@ resources:
 ---
 
 <div class="page-buttons">
-  <a href="https://calvarytemple.churchcenteronline.com/giving?open-in-church-center-modal=true">{{< img-retina "donate" >}}</a>
-  <a href="/volunteer/">{{< img-retina "volunteer" >}}</a>
+  <a href="https://calvarytemple.churchcenteronline.com/giving?open-in-church-center-modal=true">{{< img-retina "donate.png" >}}</a>
+  <a href="/volunteer/">{{< img-retina "volunteer.png" >}}</a>
 </div>
