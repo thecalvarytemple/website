@@ -1,6 +1,5 @@
 {{ hugo.Generator }}
 {{ $imageCdn := .Site.Params.imageCDN }}
-{{ $sassCdn := .Site.Params.sass }}
 <link rel="icon" type="image/png" href="{{ $imageCdn }}favicon-16.png" sizes="16x16" />
 <link rel="icon" type="image/png" href="{{ $imageCdn }}favicon-32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="{{ $imageCdn }}favicon-64.png" sizes="64x64" />
@@ -12,9 +11,9 @@
 <link href="{{ $imageCdn }}calvary-logo-192x192.png" rel="icon" sizes="192x192" />
 <link href="{{ $imageCdn }}calvary-logo-128x128.png" rel="icon" sizes="128x128" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-{{ $style := resources.Get "{{ $sassCdn }}calvary.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+{{ $style := resources.Get "sass/calvary.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
-
+<script src="https://kit.fontawesome.com/6b5099130c.js" crossorigin="anonymous"></script>
 <!-- interaction observer polyfill and image lazy-loader -->
 <script src="{{ .Site.BaseURL }}js/intersection-observer.js"></script>
 <script src="{{ .Site.BaseURL }}js/lozad.min.js"></script>

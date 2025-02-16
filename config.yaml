@@ -23,4 +23,5 @@ resources:
   sources:
     - src: "content/**"
       exclude: ["**/index.md"]
+
 ---
