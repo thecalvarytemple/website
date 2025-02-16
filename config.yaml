@@ -18,6 +18,7 @@ params:
     enabled: true
     youtube_id: calvarytemple9808
   imageCDN: "https://cdn.thecalvarytemple.org/static/images/"
+  sassCDN: "https://cdn.thecalvarytemple.org/static/sass/"
 resources:
   sources:
     - src: "content/**"
