@@ -7,7 +7,7 @@ resources:
 ---
 
 
-The Arbor Church podcast features weekly Sunday messages from our teaching team, and it's completely free. Simply subscribe through your preferred platform from below. If you'd like to listen right now, all our messages can be streamed from the <a href="../../messages/">Messages</a> section on this website. 
+Calvary Temple podcast features weekly Sunday messages from our teaching team, and it's completely free. Simply subscribe through your preferred platform from below. If you'd like to listen right now, all our messages can be streamed from the <a href="../../messages/">Messages</a> section on this website. 
 
 <br />
 

@@ -1,9 +1,7 @@
 ---
 date: "2019-02-10"
 title: Upper Room Youth
-resources:
-- name: header
-  src: students.jpg
+header: students.jpg
 menu:
   main:
     parent: 'Get Involved'

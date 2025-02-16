@@ -2,9 +2,7 @@
 date: "2025-01-04"
 title: February
 weight: 2
-resources:
-- name: header
-- src: bible.jpg
+header: bible.jpg
 ---
 
 <h4 style="text-align:center;">Amplified Version</h4>

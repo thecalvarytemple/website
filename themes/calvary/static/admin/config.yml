@@ -8,56 +8,6 @@ backend:
 media_folder: "static/img/uploads"
 public_folder: "/img/uploads"
 collections:
-  - name: "event"
-    label: "Event"
-    folder: "content/events"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - label: "Event Name"
-        name: "title"
-        widget: "string"
-        hint: "The name of the event. Example: Ladies Night"
-        required: true
-      - label: "Event Date"
-        name: "date"
-        widget: "datetime"
-        date_format: "YYYY-MM-DD"
-        time_format: false
-        picker_utc: true
-        hint: "The date on which the event occurs."
-        required: true
-      - label: "Publish Date"
-        name: "publishdate"
-        widget: "datetime"
-        date_format: "YYYY-MM-DD"
-        time_format: false
-        picker_utc: true
-        hint: "The date on which the event should appear on the website. Typically leave set at today to make it show up immediately"
-        required: true
-      - label: "Expiration Date"
-        name: "expirydate"
-        widget: "datetime"
-        date_format: "YYYY-MM-DD"
-        time_format: false
-        picker_utc: true
-        hint: "The date on which the event should be taken down from the website. Typically set to a day or two after the event."
-        required: true
-      - label: "Button Text"
-        name: "button_text"
-        widget: "string"
-        hint: "If you want to add a button to the event, put the text you want to appear on the button here."
-        required: false
-      - label: "Button Link"
-        name: "button_link"
-        widget: "string"
-        hint: "If you want to add a button to the event, put the button link here (beginning with https)"
-        required: false
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
-        required: true
-        hint: ""
   - name: "news"
     label: "News"
     folder: "content/news"
@@ -82,22 +32,22 @@ collections:
       - label: "Date"
         name: "date"
         widget: "datetime"
-        hint: "The date on which the message was delivered."
+        hint: "The date on which the message was delivered. Format = 2024-12-01T09:00:00-08:00"
         required: true
       - label: "Series"
         name: "series"
         widget: "string"
-        hint: "The series to which the message belongs. Use all lower case and replace spaces with dashes. Must match the first part of the Path field (before the slash)! Example: loving-like-jesus"
+        hint: "The series to which the message belongs. Use all lower case and replace spaces with dashes. Must match the first part of the Path field (before the slash)! Example: chaos"
         required: true
       - label: "Speaker"
         name: "speaker"
         widget: "string"
-        hint: "The speaker who delivered the message. Example: Alison Acone"
+        hint: "The speaker who delivered the message. Example: Scott Mays"
         required: true
       - label: "Podcast URL"
         name: "podcast"
         widget: "string"
-        hint: "The URL to the MP3 file containing the podcast's audio. Example: https://calvarytemple.org/podcast/loving-like-jesus-part-1.mp3"
+        hint: "The filename to the MP3/M4A file containing the podcast's audio. Example: loving-like-jesus-part-1.mp3 or chaos.m4a"
         required: true
       - label: "Podcast size (bytes)"
         name: "podcast_bytes"
@@ -130,6 +80,6 @@ collections:
         name: body
         widget: markdown
         required: true
-        hint: "A description/summary of the message. Example: From Gospels, Alison demonstrates the ways Jesus loved his disciples, and how we can love others using the same... "
+        hint: "A description/summary of the message. Example: From Psalms 72, Pastor Scott demonstrates the three ways... "
     meta: { path: { widget: string, label: 'Path', index_file: 'index', hint: "The series, a slash, and then a short title with only letters and numbers (no spaces). Example: loving-like-jesus/part-1" } }
 

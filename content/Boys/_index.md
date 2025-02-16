@@ -1,9 +1,7 @@
 ---
 date: "2024-12-10"
 title: "Boys Classes"
-resources:
-- name: header
-  src: RoyalRangers.jpg
+header: RoyalRangers.jpg
 menu:
   main:
     parent: 'Get Involved'

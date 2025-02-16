@@ -341,7 +341,7 @@ nav.readings-menu {
 
           &.active {
             background-color: #23527e;
-            color: #aaaaaa;
+            color: #dfdfdf;
           
             &:hover {
               background-color: #186fa1;
@@ -355,7 +355,7 @@ nav.readings-menu {
 
 .nav-tabs .nav-link.active {
     background-color: #23527e; /* Replace with the color of the buttons in readings-menu */
-    color: #aaaaaa; /* Replace with the text color of the buttons in readings-menu */
+    color: #dfdfdf; /* Replace with the text color of the buttons in readings-menu */
 }
 
 .btn-oval {
@@ -366,7 +366,7 @@ nav.readings-menu {
   display: inline-block;
   width: 100%;
   background-color: #23527e; /* Replace with your desired background color */
-  color: #aaaaaa; /* Replace with your desired text color */
+  color: #dfdfdf; /* Replace with your desired text color */
   border: none;
 }
 

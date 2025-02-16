@@ -1,11 +1,7 @@
 ---
 date: "2019-02-10"
 title: What We Believe
-resources:
-- name: header
-  src: what-we-believe.jpg
-
-
+header: what-we-believe.jpg
 menu:
   main:
     parent: "About"

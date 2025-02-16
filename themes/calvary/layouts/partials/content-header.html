@@ -9,21 +9,16 @@
 {{ partial "menu.html" . }}
 
 <div class="header">
-  {{ $header := .Resources.Match "header"}}
-  {{ if gt (len $header) 0 }}
-    {{ range .Resources.Match "header" }}
-      <img class="desktop-image" src=" {{ .RelPermalink }}" />
-      <div class="mobile-image" style="background-image: url({{ .RelPermalink }})"></div>
-      {{ end }}
+  {{ $imageCdn := .Site.Params.imageCDN }}
+  {{ if .Params.header }}
+    <img class="desktop-image" src="{{ $imageCdn }}{{ replace .File.Dir "\\" "/" }}{{ .Params.header }}" />
+    <div class="mobile-image" style="background-image: url('{{ $imageCdn }}{{ replace .File.Dir "\\" "/" }}{{ .Params.header }}')"></div>
   {{ else }}
     <div class="generic-header"></div>
   {{ end }}
   <div class="header-content">
     <div>
       <h1>{{ .Title }}</h1>
-      <div class="subtitle">
-        {{ .Params.subtitle }}
-      </div>
     </div>
   </div>
 </div>

@@ -7,11 +7,7 @@ menu:
   main:
     parent: 'Get Involved'
     weight: 80
-resources:
-- name: header
-  src: clothing.jpg
-- name: community-closet
-  src: pexels-photo-102129-300x200.jpeg
+header: clothing.jpg
 
 ---
 

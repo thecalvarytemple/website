@@ -2,9 +2,7 @@
 date: "2025-01-04"
 title: January
 weight: 1
-resources:
-- name: header
-- src: bible.jpg
+header: bible.jpg
 ---
 
 <h5 style="text-align:center">Amplified Version</h5>

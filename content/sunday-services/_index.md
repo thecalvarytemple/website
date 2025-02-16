@@ -1,9 +1,7 @@
 ---
 date: "2024-02-15"
 title: "Services"
-resources:
-- name: header
-  src: what-to-expect.jpg
+header: what-to-expect.jpg
 menu:
   main:
     parent: 'About'

@@ -5,9 +5,8 @@ weight: 25
 blockColor: "#307015"
 tagline: "Growing together on Sundays"
 image: "block-messages.jpg"
+backdrop: service.jpg
 resources:
-- name: backdrop
-  src: service.jpg
 - name: watch
   src: watch.png
 ---

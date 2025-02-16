@@ -1,10 +1,10 @@
 <div style="position: relative;">
 
   <div class="image-shader">
-
+  {{ $imageCdn := .Site.Params.imageCDN}}
   <div class="home-logo {{ .Params.logostyle }}">
     <a href="{{ .Site.BaseURL }}">
-      <img src="{{ .Site.BaseURL }}img/calvary-logo-menu.png" />
+      <img src="{{ $imageCdn }}calvary-logo-menu.png" />
     </a>
     <div class="find-us visible-xs-block visible-md-block visible-lg-block">
       SUNDAYS at 10:15am <br />
@@ -45,7 +45,7 @@
       </ul>
       <div class="menu-logo">
         <a href="{{ .Site.BaseURL }}">
-          <img src="{{ .Site.BaseURL }}img/calvary-mobile-logo.png" />
+          <img src="{{ $imageCdn }}calvary-mobile-logo.png" />
         </a>
       </div>
       <div class="hamburger" onClick="return toggle_main_menu();">

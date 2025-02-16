@@ -5,9 +5,8 @@ menu: "main"
 weight: 20
 blockColor: "#909090"
 tagline: "Gathering together in Groups"
+backdrop: "coffeetime.jpg"
 resources:
-- name: backdrop
-  src: coffeetime.jpg
 - name: groups
   src: groups.png
 - name: daily-posts

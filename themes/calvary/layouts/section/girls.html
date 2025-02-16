@@ -1,31 +1,40 @@
 {{ partial "content-header.html" . }}
 
+
 <div class="container">
   <div class="row">
-    <div class="col-sm-12 col-md-8 offset-md-2">
+    <div class="col-sm-12 col-md-8 offset-md-2 text-center">
       {{ .Content }}
+      <br />
     </div>
   </div>
 
-  <div class="row">
-    {{ range $i, $p := .Data.Pages }}
-      <div class="col-sm-12 col-md-6 gallery">
-        <h2>{{ .Title }}</h2>
-        {{ range .Resources.Match "photo" }}
-          <img src="{{ .RelPermalink }}" style="max-width: 100%; margin-bottom: 20px;" />
-        {{ end }}
-        <p>{{ .Content }}</p>
-      </div>
-      {{ if eq (mod (add $i 1) 2) 0 }}
-        </div><div class="row">
-      {{ end }}
+  {{ $imageCdn := .Site.Params.imageCDN }}
+  {{ $pages := .Data.Pages.ByWeight }}
+  {{ range $i, $p := $pages }}
+    {{ if eq (mod $i 2) 0 }}
+      <div class="row">
     {{ end }}
-  </div>
+        <div class="col-sm-12 col-md-6 gallery">
+          <h2>{{ .Title }}</h2>
+          {{ if .Params.photo }}
+            <img src="{{ $imageCdn }}girls/{{ .Params.photo }}" style="width: 200px; float: right; margin-left: 15px; margin-bottom: 10px;" />
+          {{ end }}
+          <p>{{ .Content }}</p>
+        </div>
+    {{ if eq (mod $i 2) 1 }}
+      </div>
+    {{ end }}
+  {{ end }}
+
+  {{ if eq (mod (len $pages) 2) 1 }}
+    </div>
+  {{ end }}
 
   <div class="row">
-    <div class="col-sm-12 col-md-8 offset-md-2 text-center">
+    <div class="text-center">
       <br />
-      <p style="margin-bottom: 0px;">If you'd like more information about Girls Ministries, email <a href="mailto:info@thecalvarytemple.org">info@thecalvarytemple.org</a>.</p>
+      <p style="margin-bottom: 0px;">For more information on the programs we offer feel free to visit our National Girls Ministries website: <a href=https://ngm.ag.org/>https://ngm.ag.org/</a></p>
     </div>
   </div>
 </div>

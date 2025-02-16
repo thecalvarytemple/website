@@ -5,9 +5,8 @@ weight: 25
 blockColor: "#307015"
 tagline: "Going together in Teams"
 image: "block-give.jpg"
+backdrop: hiking-senior-discount.jpg
 resources:
-- name: backdrop
-  src: hiking-senior-discount.jpg
 - name: donate
   src: donate.png
 - name: volunteer

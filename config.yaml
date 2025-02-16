@@ -17,4 +17,9 @@ params:
   livestream: 
     enabled: true
     youtube_id: calvarytemple9808
+  imageCDN: "https://cdn.thecalvarytemple.org/static/images/"
+resources:
+  sources:
+    - src: "content/**"
+      exclude: ["**/index.md"]
 ---

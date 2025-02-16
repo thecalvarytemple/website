@@ -16,13 +16,17 @@
         <div class="col-sm-12 col-md-6 gallery">
           <h2>{{ .Title }}</h2>
           {{ range .Resources.Match "photo" }}
-            <img src="{{ .RelPermalink }}" style="max-width: 100%; margin-bottom: 20px;" />
+            <img src="{{ .RelPermalink }}" style="max-width: 100%; float: right; margin-left: 15px; margin-bottom: 10px;" />
           {{ end }}
           <p>{{ .Content }}</p>
         </div>
     {{ if eq (mod $i 2) 1 }}
       </div>
     {{ end }}
+  {{ end }}
+
+  {{ if eq (mod (len $pages) 2) 1 }}
+    </div>
   {{ end }}
 
   <div class="row">

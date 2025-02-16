@@ -1,9 +1,7 @@
 ---
 date: "2017-01-01"
 title: Volunteer
-resources:
-- name: header
-  src: volunteer.jpg
+header: volunteer.jpg
 menu:
   main:
     parent: 'Get Involved'

@@ -4,7 +4,7 @@ title: "What Really Matters"
 series: "perspective"
 speaker: "Scott Mays"
 type: message
-podcast: https://pc.virtuallyanadmin.com/whatreallymatters.m4a
+podcast: WhatReallyMatters.m4a
 podcast_bytes: 37660735
 podcast_duration: 22:44
 youtube_id: eRelP2C9lOo
