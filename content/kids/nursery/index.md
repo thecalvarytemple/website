@@ -1,9 +1,7 @@
 ---
 date: "2019-02-10"
 title: Nursery
-resources:
-- name: photo
-  src: nursery-1024x331.jpg
+photo: nursery-1024x331.jpg
 menu:
   main:
     parent: 'Kids'

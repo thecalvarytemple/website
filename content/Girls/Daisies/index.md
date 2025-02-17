@@ -1,9 +1,7 @@
 ---
 date: "2019-02-10"
 title: 'Daisies: Kindergarten'
-resources:
-  name: photo
-  src: Daisies.jpg
+photo: Daisies.jpg
 weight: 20
 ---
 

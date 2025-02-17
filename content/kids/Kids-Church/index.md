@@ -1,10 +1,8 @@
 ---
 date: "2019-02-10"
 title: Kids Church
-resources:
-- name: photo
-  src: kids-church-1024x488.jpg
-weight: 2
+photo: kids-church-1024x488.jpg
+weight: 20
 ---
 
 We here at Calvary Temple believe that children are precious to God and that means they are precious to us. We want you as a parent to know that ALL of our children’s workers and volunteers have undergone background checks. Children are our future and they are our future church.

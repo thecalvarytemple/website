@@ -1,27 +1,37 @@
 {{ partial "content-header.html" . }}
 
-<div class="container">
+<div class="container container-90">
   <div class="row">
-    <div class="col-sm-12 col-md-8 offset-md-2">
+    <div class="">
       {{ .Content }}
     </div>
   </div>
 
-  <div class="row">
-    {{ range $i, $p := .Data.Pages }}
-      <div class="col-sm-6 col-md-6 gallery">
-        <h2>{{ .Title }}</h2>
-        {{ range .Resources.Match "photo" }}
-          <img src="{{ .RelPermalink }}" style="max-width: 100%; margin-bottom: 20px;" />
-        {{ end }}
-        <p>{{ .Content }}</p>
+  {{ $imageCdn := .Site.Params.imageCDN }}
+  {{ $pages := .Data.Pages.ByWeight }}
+  {{ range $i, $p := $pages }}
+    {{ if eq (mod $i 2) 0 }}
+      <div class="row">
+    {{ end }}
+        <div class="col-sm-12 col-md-6 gallery">
+          <!--<h2>{{ .Title }}</h2> --->
+          {{ if .Params.photo }}
+            <img src="{{ $imageCdn }}kids/{{ .Params.photo }}" style="max-width: 100%; margin-bottom: 20px;" />
+          {{ end }}
+          <p>{{ .Content }}</p>
+        </div>
+    {{ if eq (mod $i 2) 1 }}
       </div>
     {{ end }}
-  </div>
+  {{ end }}
+
+  {{ if eq (mod (len $pages) 2) 1 }}
+    </div>
+  {{ end }}
 
   <div class="row">
     <div class="col-12 text-center">
-      <p style="margin-bottom: 0px;">If you'd like more information about Royal Rangers, email <a href="mailto:info@thecalvarytemple.org">info@thecalvarytemple.org</a>.</p>
+      <p style="margin-bottom: 0px;">If you'd like more information about Calvary Temple Kids, email <a href="mailto:info@thecalvarytemple.org">info@thecalvarytemple.org</a>.</p>
     </div>
   </div>
 </div>
