@@ -4,23 +4,37 @@
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <div class="social-tabs">
-    <div class="tab-buttons">
-        <button class="tab-button active" data-tab="facebook">Facebook</button>
-        <button class="tab-button" data-tab="instagram">Instagram</button>
-        <button class="tab-button" data-tab="twitter">Twitter/X</button>
-    </div>
+    <nav class="social-tabs__nav">
+        <a href="#facebook" class="social-tabs__nav-item is-active" data-tab="facebook">
+            <img src="{{ print .Site.Params.imageCDN "social-media/facebook.png" }}" alt="Facebook" width="32" height="32">
+        </a>
+        <a href="#instagram" class="social-tabs__nav-item" data-tab="instagram">
+            <img src="{{ print .Site.Params.imageCDN "social-media/instagram.png" }}" alt="Instagram" width="32" height="32">
+        </a>
+        <a href="#twitter" class="social-tabs__nav-item" data-tab="twitter">
+            <img src="{{ print .Site.Params.imageCDN "social-media/twitter.png" }}" alt="Twitter" width="32" height="32">
+        </a>
+    </nav>
     
-    <div class="tab-content">
-        <div id="facebook" class="tab-pane active">
+    <div class="social-tabs__content">
+        <div id="facebook" class="social-tabs__content-item is-active">
             <h2>Latest Facebook Posts</h2>
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcalvarytemplestcharles&tabs=timeline&width=2000&height=500&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=false&appId" width="2000" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcalvarytemplestcharles&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
+                    width="800" 
+                    height="800" 
+                    style="border:none;overflow:hidden" 
+                    scrolling="no" 
+                    frameborder="0" 
+                    allowfullscreen="true" 
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+            </iframe>
         </div>
         
-        <div id="instagram" class="tab-pane">
+        <div id="instagram" class="social-tabs__content-item">
             <h2>Latest Instagram Posts</h2>
             <iframe 
-                src="https://www.instagram.com/thecalvarytemple/embed?width=1000"
-                width="1000" 
+                src="https://www.instagram.com/thecalvarytemple/embed?width=500"
+                width="800" 
                 height="800" 
                 frameborder="0" 
                 scrolling="no" 
@@ -29,10 +43,10 @@
             </iframe>
         </div>
         
-        <div id="twitter" class="tab-pane">
+        <div id="twitter" class="social-tabs__content-item">
             <h2>Latest Tweets</h2>
             <a class="twitter-timeline" 
-               data-width="1000"
+               data-width="800"
                data-height="800"
                data-theme="light"
                data-chrome="noheader nofooter noborders transparent"
@@ -83,20 +97,22 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const tabPanes = document.querySelectorAll('.tab-pane');
+    const tabButtons = document.querySelectorAll('.social-tabs__nav-item');
+    const tabContents = document.querySelectorAll('.social-tabs__content-item');
 
     tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent the default anchor behavior
+
             const tabId = button.getAttribute('data-tab');
-            
-            // Remove active class from all buttons and panes
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabPanes.forEach(pane => pane.classList.remove('active'));
-            
-            // Add active class to clicked button and corresponding pane
-            button.classList.add('active');
-            document.getElementById(tabId).classList.add('active');
+
+            // Deactivate all tabs and content items
+            tabButtons.forEach(btn => btn.classList.remove('is-active'));
+            tabContents.forEach(content => content.classList.remove('is-active'));
+
+            // Activate the clicked tab and corresponding content item
+            button.classList.add('is-active');
+            document.getElementById(tabId).classList.add('is-active');
 
             // Refresh the social feed content
             if (tabId === 'facebook') {
@@ -108,5 +124,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Initialize the first tab
+    const firstTab = document.querySelector('.social-tabs__nav-item');
+    if (firstTab) {
+        const tabId = firstTab.getAttribute('data-tab');
+        if (tabId === 'facebook') {
+            if (typeof FB !== 'undefined') FB.XFBML.parse();
+        }
+    }
 });
 </script>
