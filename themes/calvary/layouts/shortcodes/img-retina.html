@@ -1,10 +1,10 @@
-{{- $src := .Get "src" -}}
-{{- $alt := .Get "alt" -}}
-{{- $retina := .Get "retina" -}}
-{{- $class := .Get "class" -}}
-{{- $imageCDN := .Site.Params.imageCDN -}}
+{{ $name := .Get 0 }}
+{{ $imageCdn := $.Site.Params.imageCDN }}
+{{ $pagePath := strings.TrimPrefix "/" $.Page.RelPermalink }}
+{{ $imagePath1x := printf "%s%s%s" $imageCdn $pagePath $name }}
+{{ $imagePath2x := printf "%s%s%s" $imageCdn $pagePath $name }}
 
-<img {{- if $src }} src="{{ $imageCDN }}{{ $src }}"{{ end }} 
-     {{- with $retina }} srcset="{{ $imageCDN }}{{ . }} 2x"{{ end }}
-     {{- with $alt }} alt="{{ . }}"{{ end }}
-     {{- with $class }} class="{{ . }}"{{ end }}>
+<img src="{{ $imagePath1x }}"
+     srcset="{{ $imagePath1x }} 1x, {{ $imagePath2x }} 2x"
+     alt="{{ $name }}"
+     loading="lazy"/>

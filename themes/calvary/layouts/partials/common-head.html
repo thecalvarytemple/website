@@ -11,8 +11,23 @@
 <link href="{{ $imageCdn }}calvary-logo-192x192.png" rel="icon" sizes="192x192" />
 <link href="{{ $imageCdn }}calvary-logo-128x128.png" rel="icon" sizes="128x128" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-{{ $style := resources.Get "sass/calvary.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}">
+{{ $scss := resources.Get "sass/calvary.scss" }}
+{{ if not $scss }}
+  {{ warnf "SCSS file not found at 'themes/calvary/assets/sass/calvary.scss', trying alternate location..." }}
+  {{ $scss = resources.Get "calvary.scss" }}
+{{ end }}
+{{ if not $scss }}
+  {{ errorf "SCSS file not found in any location. Please ensure 'calvary.scss' exists in the assets directory" }}
+{{ else }}
+  {{ $opts := dict "targetPath" "css/style.css" "outputStyle" "compressed" "includePaths" (slice "themes/calvary/assets/sass" "node_modules") }}
+  {{ $styles := $scss | css.Sass $opts }}
+  {{ if $styles }}
+    {{ $styles = $styles | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+  {{ else }}
+    {{ errorf "Failed to process SCSS file" }}
+  {{ end }}
+{{ end }}
 <script src="https://kit.fontawesome.com/6b5099130c.js" crossorigin="anonymous"></script>
 <!-- interaction observer polyfill and image lazy-loader -->
 <script src="{{ .Site.BaseURL }}js/intersection-observer.js"></script>

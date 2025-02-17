@@ -52,9 +52,13 @@ security:
   enableInlineShortcodes: true
 
 outputs:
-  home: ["HTML", "RSS"]
-  section: ["HTML", "RSS"]
-  taxonomyTerm: ["HTML"]
-  taxonomy: ["HTML"]
-  term: ["HTML"]
+  home: 
+    - HTML
+    - RSS
+  section: 
+    - HTML
+  taxonomy:    # This replaces "taxonomyterm"
+    - HTML
+  term: 
+    - HTML
 ---
