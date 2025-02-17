@@ -4,7 +4,7 @@
 {{- $class := .Get "class" -}}
 {{- $imageCDN := .Site.Params.imageCDN -}}
 
-<img {{- if $src }} src="{{ $imageCDN }}{{ $src }}"{{ end }} 
+<img src="{{ $imageCDN }}{{ $src }}" 
      {{- with $retina }} srcset="{{ $imageCDN }}{{ . }} 2x"{{ end }}
      {{- with $alt }} alt="{{ . }}"{{ end }}
      {{- with $class }} class="{{ . }}"{{ end }}>

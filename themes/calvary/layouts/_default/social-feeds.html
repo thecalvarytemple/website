@@ -1,0 +1,38 @@
+{{ define "main" }}
+<!-- Header section -->
+<div class="header" style="background-image: url({{ .Site.Params.imageCDN }}{{ .Params.header }})">
+    <div class="header-content">
+        <div>
+            <h1>{{ .Title }}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid detail-container" style="margin-top: 400px;">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="social-feeds-container">
+                <div class="social-content">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Initialize social feeds -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Force initial load of all feeds
+        if (typeof FB !== 'undefined') {
+            FB.XFBML.parse();
+        }
+        if (typeof twttr !== 'undefined') {
+            twttr.widgets.load();
+        }
+        if (window.instgrm) {
+            window.instgrm.Embeds.process();
+        }
+    });
+</script>
+{{ end }}

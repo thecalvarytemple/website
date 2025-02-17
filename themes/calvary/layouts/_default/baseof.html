@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <!-- Add social-tabs CSS -->
+    {{ $sass := resources.Get "sass/calvary.scss" }}
+    {{ $style := $sass | resources.ToCSS }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="fb:app_id" content="your-fb-app-id">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.com/en_US/sdk.js"></script>
+    
+    <!-- Twitter/X SDK -->
+    <script async src="https://platform.twitter.com/widgets.js"></script>
+    
+    <!-- Instagram Embed SDK -->
+    <script async defer src="https://www.instagram.com/embed.js"></script>
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <!-- Add social-tabs JavaScript -->
+    <script src="/js/social-tabs.js"></script>
+    
+    <!-- Initialize Facebook SDK -->
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml: true,
+                version: 'v18.0'
+            });
+        };
+    </script>
+</body>
+</html>

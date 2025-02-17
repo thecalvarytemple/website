@@ -1,0 +1,112 @@
+<!-- Load social media SDKs first -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.com/en_US/sdk.js"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<div class="social-tabs">
+    <div class="tab-buttons">
+        <button class="tab-button active" data-tab="facebook">Facebook</button>
+        <button class="tab-button" data-tab="instagram">Instagram</button>
+        <button class="tab-button" data-tab="twitter">Twitter/X</button>
+    </div>
+    
+    <div class="tab-content">
+        <div id="facebook" class="tab-pane active">
+            <h2>Latest Facebook Posts</h2>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcalvarytemplestcharles&tabs=timeline&width=2000&height=500&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=false&appId" width="2000" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+        
+        <div id="instagram" class="tab-pane">
+            <h2>Latest Instagram Posts</h2>
+            <iframe 
+                src="https://www.instagram.com/thecalvarytemple/embed?width=1000"
+                width="1000" 
+                height="800" 
+                frameborder="0" 
+                scrolling="no" 
+                allowtransparency="true"
+                style="max-width:100%">
+            </iframe>
+        </div>
+        
+        <div id="twitter" class="tab-pane">
+            <h2>Latest Tweets</h2>
+            <a class="twitter-timeline" 
+               data-width="1000"
+               data-height="800"
+               data-theme="light"
+               data-chrome="noheader nofooter noborders transparent"
+               href="https://twitter.com/calvtemple?ref_src=twsrc%5Etfw">
+               Tweets by Calvary Temple
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Initialize embeds immediately -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initial load of default tab (Instagram)
+        if (window.instgrm) {
+            window.instgrm.Embeds.process();
+        }
+
+        // Initialize Facebook
+        if (typeof FB !== 'undefined') {
+            FB.XFBML.parse();
+        }
+
+        // Initialize Twitter
+        if (typeof twttr !== 'undefined') {
+            twttr.widgets.load();
+        }
+        
+        // Lazy load social embeds when tab is clicked
+        const tabButtons = document.querySelectorAll('.tab-button');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tab = button.getAttribute('data-tab');
+                if (tab === 'facebook') {
+                    FB.XFBML.parse();
+                } else if (tab === 'twitter') {
+                    twttr.widgets.load();
+                } else if (tab === 'instagram') {
+                    if (window.instgrm) {
+                        window.instgrm.Embeds.process();
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tabId = button.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and panes
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabPanes.forEach(pane => pane.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding pane
+            button.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+
+            // Refresh the social feed content
+            if (tabId === 'facebook') {
+                if (typeof FB !== 'undefined') FB.XFBML.parse();
+            } else if (tabId === 'twitter') {
+                if (typeof twttr !== 'undefined') twttr.widgets.load();
+            } else if (tabId === 'instagram') {
+                if (window.instgrm) window.instgrm.Embeds.process();
+            }
+        });
+    });
+});
+</script>

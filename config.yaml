@@ -1,5 +1,5 @@
 ---
-baseURL: "https://thecalvarytemple.org"
+baseURL: "http://example.org/"
 title: "Calvary Temple"
 languageCode: "en-us"
 theme: "calvary"
@@ -24,4 +24,37 @@ resources:
     - src: "content/**"
       exclude: ["**/index.md"]
 
+module:
+  mounts:
+    - source: themes/calvary/assets/sass
+      target: assets/sass
+    - source: themes/calvary/static
+      target: static
+    - source: themes/calvary/assets/js
+      target: assets/js
+    - source: themes/calvary/layouts
+      target: layouts
+    - source: layouts
+      target: layouts
+    - source: content
+      target: content
+    - source: layouts/shortcodes
+      target: layouts/shortcodes
+
+# Hugo's asset pipeline configuration
+minify:
+  minifyOutput: true
+
+build:
+  writeStats: true
+
+security:
+  enableInlineShortcodes: true
+
+outputs:
+  home: ["HTML", "RSS"]
+  section: ["HTML", "RSS"]
+  taxonomyTerm: ["HTML"]
+  taxonomy: ["HTML"]
+  term: ["HTML"]
 ---

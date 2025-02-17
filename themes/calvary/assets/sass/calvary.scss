@@ -1,5 +1,5 @@
-  $body-font: Baskerville, Libre Baskerville, serif;
-  $header-font: Montserrat, sans-serif;
+$body-font: Baskerville, Libre Baskerville, serif;
+$header-font: Montserrat, sans-serif;
   
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700');
 
@@ -97,7 +97,7 @@ a:hover {
 }
 
 .splash-footer a {
-   color: black;
+  color: black;
 }
 
 .footer {
@@ -676,6 +676,7 @@ ul.footer-menu ul li {
 @import 'messages';
 @import 'menu';
 @import 'livestream';
+@import 'social-tabs';
 
 @import 'mobile';
 @import 'desktop';
