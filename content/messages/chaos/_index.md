@@ -1,5 +1,5 @@
 ---
-date: "2024-10-29"
+date: "2025-02-17"
 type: series
-header: chaos.jpg
+header: "chaos.jpg"
 ---

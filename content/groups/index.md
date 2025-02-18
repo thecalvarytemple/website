@@ -11,13 +11,7 @@ menu:
 draft: false
 ---
 
-<div style="text-align: center; margin-bottom: 50px;">
-  <a href="https://calvarytemple.churchcenter.com/groups?open-in-church-center-modal=true">
-    <img width="285" height="110" src="/img/groups-button.png" alt="Sign Up for a Group"/>
-  </a>
-</div>
 
-We find and follow Jesus through GROUPS in a variety of ways. Click the sign up button to see what group might fit for you! Fall trimester begins in October and runs for 8 weeks.
 
 <br />
 

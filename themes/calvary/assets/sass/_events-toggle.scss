@@ -1,0 +1,130 @@
+$primary-color: #23527e;
+$secondary-color: #dfdfdf;
+$grey-color: #6c757d;
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.toggle-container input[type="radio"] {
+    display: none;
+}
+
+.toggle-container label {
+    padding: 8px 16px;
+    border: 1px solid $grey-color;
+    cursor: pointer;
+    background-color: white;
+    color: $grey-color;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #e9ecef;
+    }
+}
+
+.toggle-container input[type="radio"]:checked + label {
+    background-color: $primary-color;
+    color: $secondary-color;
+    border-color: $primary-color;
+}
+
+.events-nav {
+    ul {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        padding: 0;
+        list-style: none;
+
+        li {
+            margin: 0 10px;
+            padding: 0;
+
+            a {
+                display: block;
+                padding: 8px 16px;
+                border: 1px solid $grey-color;
+                cursor: pointer;
+                background-color: white;
+                color: $grey-color;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: #e9ecef;
+                }
+            }
+
+            &.active a {
+                background-color: $primary-color;
+                color: $secondary-color;
+                border-color: $primary-color;
+            }
+        }
+    }
+}
+
+.view-container {
+    display: none;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+
+#calendar-view:checked ~ #calendar-container {
+    display: block;
+}
+
+#list-view:checked ~ #list-container {
+    display: block;
+}
+
+#calendar-container {
+    display: block;
+}
+
+.calendar-view:target ~ #calendar-container {
+    display: block;
+}
+
+.list-view:target ~ #list-container {
+    display: block;
+}
+
+.social-tabs {
+    .nav-tabs {
+        border-bottom: 2px solid #dee2e6;
+        margin-bottom: 1rem;
+    }
+
+    .nav-link {
+        border: 1px solid transparent;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+        color: #495057;
+
+        &:hover {
+            border-color: #e9ecef #e9ecef #dee2e6;
+        }
+
+        &.active {
+            color: #495057;
+            background-color: #fff;
+            border-color: #dee2e6 #dee2e6 #fff;
+        }
+    }
+
+    .tab-content {
+        padding: 1rem;
+        border: 1px solid #dee2e6;
+        border-top: none;
+    }
+}

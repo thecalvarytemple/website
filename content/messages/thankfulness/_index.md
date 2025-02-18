@@ -1,5 +1,5 @@
 ---
-date: "2024-11-24"
+date: "2025-02-17"
 type: series
-header: thankfulness.jpg
+header: "thankfulness.jpg"
 ---
