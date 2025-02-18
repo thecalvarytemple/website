@@ -1,9 +1,7 @@
 ---
 date: "2019-02-10"
 title: 'Expedition Rangers: 9th-12th grade'
-resources:
-- name: photo
-  src: ExpeditionRangers150x147.png
+photo: ExpeditionRangers150x147.png
 weight: 40
 ---
 

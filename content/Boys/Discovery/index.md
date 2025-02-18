@@ -1,9 +1,7 @@
 ---
 date: "2019-02-10"
 title: 'Discovery Rangers: 3rd-5th grade'
-resources:
-- name: photo
-  src: DiscoveryRangers158x146.png
+photo: DiscoveryRangers158x146.png
 weight: 2
 ---
 

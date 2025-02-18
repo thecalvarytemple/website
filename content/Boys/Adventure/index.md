@@ -1,9 +1,7 @@
 ---
 date: "2019-02-10"
 title: 'Adventure Rangers: 6th-8th grade'
-resources:
-- name: photo
-  src: AdventureRangers150x151.png
+photo: AdventureRangers150x151.png
 weight: 30
 ---
 

@@ -1,9 +1,7 @@
 ---
 date: "2019-02-10"
 title: 'Ranger Kids: Kindergarten-2nd grade'
-resources:
-- name: photo
-  src: RangerKids200x135.png
+photo: RangerKids200x135.png
 weight: 1
 ---
 
