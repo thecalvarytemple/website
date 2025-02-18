@@ -122,35 +122,68 @@ a:hover {
 }
 
 .footer a.social-facebook {
-  background-image: url(https://cdn.thecalvarytemple.org/images/social-facebook.png);
+  background-image: url(https://cdn.thecalvarytemple.org/static/images/social-facebook.png);
 }
 
 .footer a.social-facebook:hover {
-  background-image: url(https://cdn.thecalvarytemple.org/images/social-facebook-on.png);
+  background-image: url(https://cdn.thecalvarytemple.org/static/images/social-facebook-on.png);
 }
 
 .footer a.social-twitter {
-  background-image: url(https://cdn.thecalvarytemple.org/images/social-twitter.png);
+  background-image: url(https://cdn.thecalvarytemple.org/static/images/social-twitter.png);
 }
 
 .footer a.social-twitter:hover {
-  background-image: url(https://cdn.thecalvarytemple.org/images/social-twitter-on.png);
+  background-image: url(https://cdn.thecalvarytemple.org/static/images/social-twitter-on.png);
 }
 
 .footer a.social-mail {
-  background-image: url(https://cdn.thecalvarytemple.org/images/social-mail.png);
+  background-image: url(https://cdn.thecalvarytemple.org/static/images/social-mail.png);
 }
 
 .footer a.social-mail:hover {
-  background-image: url(https://cdn.thecalvarytemple.org/images/social-mail-on.png);
+  background-image: url(https://cdn.thecalvarytemple.org/static/images/social-mail-on.png);
 }
 
 .footer a.social-instagram {
-  background-image: url(https://cdn.thecalvarytemple.org/images/social-instagram.png);
+  background-image: url(https://cdn.thecalvarytemple.org/static/images/social-instagram.png);
 }
 
 .footer a.social-instagram:hover {
-  background-image: url(https://cdn.thecalvarytemple.org/images/social-instagram-on.png);
+  background-image: url(https://cdn.thecalvarytemple.org/static/images/social-instagram-on.png);
+}
+
+// New CSS rules for image hover effect
+.footer a[href*="facebook.com"] img {
+  content: url(https://cdn.thecalvarytemple.org/static/images/social-facebook.png);
+}
+
+.footer a[href*="facebook.com"] img:hover {
+  content: url(https://cdn.thecalvarytemple.org/static/images/social-facebook-on.png);
+}
+
+.footer a[href*="twitter.com"] img {
+  content: url(https://cdn.thecalvarytemple.org/static/images/social-twitter.png);
+}
+
+.footer a[href*="twitter.com"] img:hover {
+  content: url(https://cdn.thecalvarytemple.org/static/images/social-twitter-on.png);
+}
+
+.footer a[href*="mailto:"] img {
+  content: url(https://cdn.thecalvarytemple.org/static/images/social-mail.png);
+}
+
+.footer a[href*="mailto:"] img:hover {
+  content: url(https://cdn.thecalvarytemple.org/static/images/social-mail-on.png);
+}
+
+.footer a[href*="instagram.com"] img {
+  content: url(https://cdn.thecalvarytemple.org/static/images/social-instagram.png);
+}
+
+.footer a[href*="instagram.com"] img:hover {
+  content: url(https://cdn.thecalvarytemple.org/static/images/social-instagram-on.png);
 }
 
 .footer .copyright {

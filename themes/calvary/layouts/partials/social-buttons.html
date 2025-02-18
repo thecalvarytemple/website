@@ -1,13 +1,9 @@
 {{ $imageCdn := .Site.Params.imageCDN }}
 <div style="width: 100%; margin:0 auto; text-align:center;">
-<img src="{{ $imageCdn }}social-mail-on.png"  />
-<img src="{{ $imageCdn }}social-facebook-on.png"  />
-<img src="{{ $imageCdn }}social-instagram-on.png"  />
-<img src="{{ $imageCdn }}social-twitter-on.png"  />
-<a class="social social-mail" href="mailto:info@thecalvarytemple.org"></a>
-<a class="social social-facebook" href="https://www.facebook.com/calvarytemplestcharles/"></a>
-<a class="social social-instagram" href="https://www.instagram.com/thecalvarytemple/"></a>
-<a class="social social-twitter" href="https://twitter.com/calvtemple"></a>
+<a href="mailto:info@thecalvarytemple.org"><img src="{{ $imageCdn }}social-mail-on.png" style="max-width: 42px; display: inline-block;" /></a>
+<a href="https://www.facebook.com/calvarytemplestcharles/"><img src="{{ $imageCdn }}social-facebook-on.png"  style="max-width: 42px; display: inline-block;"/></a>
+<a href="https://www.instagram.com/thecalvarytemple/"><img src="{{ $imageCdn }}social-instagram-on.png" style="max-width: 42px; display: inline-block;" /></a>
+<a href="https://twitter.com/calvtemple"><img src="{{ $imageCdn }}social-twitter-on.png" style="max-width: 42px; display: inline-block;" /></a>
 
 <div class="copyright">
   Copyright &copy; {{ now.Format "2006" }} Calvary Temple. 
