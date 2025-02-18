@@ -10,6 +10,41 @@
 <link href="{{ $imageCdn }}calvary-logo-180x180.png" rel="apple-touch-icon" sizes="180x180" />
 <link href="{{ $imageCdn }}calvary-logo-192x192.png" rel="icon" sizes="192x192" />
 <link href="{{ $imageCdn }}calvary-logo-128x128.png" rel="icon" sizes="128x128" />
+{{ with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+{{ with .OutputFormats.Get "json" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+{{ with .OutputFormats.Get "webmanifest" -}}
+  {{ printf `<link rel=%q href=%q>` .Rel .Permalink | safeHTML }}
+{{ end }}
+{{ with .OutputFormats.Get "sitemap" -}}
+  {{ printf `<link rel=%q type=%q href=%q>` .Rel .MediaType.Type .Permalink | safeHTML }}
+{{ end }}
+{{ with .OutputFormats.Get "atom" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+{{ with .OutputFormats.Get "opensearch" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+{{ with .OutputFormats.Get "opensearchdescription" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+{{ with .OutputFormats.Get "opensearchxml" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+{{ with .OutputFormats.Get "opensearchdescriptionxml" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+{{ with .OutputFormats.Get "search" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+{{ with .OutputFormats.Get "jsonsearch" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+{{ with .OutputFormats.Get "csv" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {{ $scss := resources.Get "sass/calvary.scss" }}
 {{ if not $scss }}

@@ -57,6 +57,7 @@ outputs:
     - RSS
   section: 
     - HTML
+    - RSS
   taxonomy:    # This replaces "taxonomyterm"
     - HTML
   term: 
