@@ -8,17 +8,18 @@ backend:
 media_folder: "static/img/uploads"
 public_folder: "/img/uploads"
 collections:
-  - name: "news"
-    label: "News"
-    folder: "content/news"
+  - name: "readings"
+    label: "Bible Reading"
+    folder: "content/readings"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}"
+    slug: "{{title}}"
     identifier_field: date
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Title', name: 'title', widget: 'string', hint: 'Month of Year' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', hint: 'Date in Month' }
+      - { label: 'Order of Month', name: 'weight', widget: 'number', hint: 'What is the numerical number of the Month' }
+      - { label: 'Header', name: 'header', widget: 'string', hint: 'This should stay bible.jpg' }
+      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'This is where the list will go for each day of the bible reading plan' }
   - name: "messages"
     label: Messages
     label_singular: 'Message'
