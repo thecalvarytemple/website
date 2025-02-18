@@ -72,33 +72,6 @@ $grey-color: #6c757d;
     }
 }
 
-.view-container {
-    display: none;
-    padding: 15px;
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-}
-
-#calendar-view:checked ~ #calendar-container {
-    display: block;
-}
-
-#list-view:checked ~ #list-container {
-    display: block;
-}
-
-#calendar-container {
-    display: block;
-}
-
-.calendar-view:target ~ #calendar-container {
-    display: block;
-}
-
-.list-view:target ~ #list-container {
-    display: block;
-}
-
 .social-tabs {
     .nav-tabs {
         border-bottom: 2px solid #dee2e6;
