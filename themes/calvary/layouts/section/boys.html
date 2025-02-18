@@ -16,8 +16,8 @@
     {{ end }}
         <div class="col-sm-12 col-md-6 gallery">
           <h2>{{ .Title }}</h2>
-          {{ range .Resources.Match "photo" }}
-            <img src="{{ $imageCdn }}boys/{{ .Params.photo }}" style="max-width: 100%; float: right; margin-left: 15px; margin-bottom: 10px;" />
+          {{ with $p.Params.photo }}
+            <img src="{{ print $imageCdn "boys/" . }}" style="max-width: 100%; float: right; margin-left: 15px; margin-bottom: 10px;" alt="{{ $p.Title }}" />
           {{ end }}
           <p>{{ .Content }}</p>
         </div>
