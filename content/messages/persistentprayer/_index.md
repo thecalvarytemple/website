@@ -1,5 +1,5 @@
 ---
-date: "2025-02-17"
+date: "2024-01-07"
 type: series
 title: "Persistent Prayer"
 header: "persistentprayer.jpg"

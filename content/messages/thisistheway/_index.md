@@ -1,5 +1,5 @@
 ---
-date: "2025-02-17"
+date: "2023-08-27"
 type: series
 title: "This is the Way"
 header: "thisistheway.jpg"

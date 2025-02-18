@@ -1,6 +1,6 @@
 ---
-date: "2025-02-17"
+date: "2023-04-16"
 type: series
 title: "Spiritual Growth"
-header: "aworkinprogress.jpg"
+header: "spiritualgrowth.jpg"
 ---

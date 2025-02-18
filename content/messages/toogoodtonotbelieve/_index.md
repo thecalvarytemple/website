@@ -1,5 +1,5 @@
 ---
-date: "2025-02-17"
+date: "2023-01-22"
 type: series
 title: "Too Good to Not Believe"
 header: ""

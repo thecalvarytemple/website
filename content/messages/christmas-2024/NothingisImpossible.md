@@ -9,4 +9,4 @@ podcast_bytes: "55023407"
 podcast_duration: "28:16"
 youtube_id: "TUWQMczG4YM"
 ---
-Join us this week as Scott Mays shares about Nothing is Impossible
+Our new series *Christmas...the best thing ever* explores the miracle of Jesus' birth through new eyes and perspectives. This week, Pastor Scott continues the series by expressing that nothing is impossible with God.

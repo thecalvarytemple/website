@@ -1,5 +1,5 @@
 ---
-date: "2025-02-17"
+date: "2024-07-07"
 type: series
 title: "Faithful Lifestyle"
 header: "faithfullifestyle.jpg"

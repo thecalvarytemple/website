@@ -1,5 +1,5 @@
 ---
-date: "2025-02-17"
+date: "2023-11-26"
 type: series
 title: "Simply Christmas"
 header: "simplychristmas.jpg"

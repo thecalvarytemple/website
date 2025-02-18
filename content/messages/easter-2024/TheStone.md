@@ -9,4 +9,4 @@ podcast_bytes: "53891851"
 podcast_duration: "27:41"
 youtube_id: "bjMkCKi5qYs"
 ---
-Join us this week as Scott Mays shares about The Stone
+From Mark 16, a message about the Stone that was rolled away and how that symbolizes that nothing is impossible with God.
