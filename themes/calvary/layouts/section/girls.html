@@ -1,40 +1,49 @@
 {{ partial "content-header.html" . }}
 
-
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-sm-12 col-md-8 offset-md-2 text-center">
-      {{ .Content }}
-      <br />
+      {{ .Content }}<br />
     </div>
   </div>
 
-  {{ $imageCdn := .Site.Params.imageCDN }}
-  {{ $pages := .Data.Pages.ByWeight }}
-  {{ range $i, $p := $pages }}
-    {{ if eq (mod $i 2) 0 }}
-      <div class="row">
-    {{ end }}
-        <div class="col-sm-12 col-md-6 gallery">
-          <h2>{{ .Title }}</h2>
-          {{ if .Params.photo }}
-            <img src="{{ $imageCdn }}girls/{{ .Params.photo }}" style="width: 200px; float: right; margin-left: 15px; margin-bottom: 10px;" />
-          {{ end }}
-          <p>{{ .Content }}</p>
-        </div>
-    {{ if eq (mod $i 2) 1 }}
-      </div>
-    {{ end }}
-  {{ end }}
-
-  {{ if eq (mod (len $pages) 2) 1 }}
+  <div class="slide-container">
+    <div class="wrapper">
+      {{ $imageCdn := .Site.Params.imageCDN }}
+      {{ $pages := .Data.Pages.ByWeight }}
+      {{ range $i, $p := $pages }}
+        <!-- Each card gets a unique id -->
+        <a class="slide-card-link" href="#card{{ $i }}">
+          <div class="slide-card" id="card{{ $i }}" tabindex="0">
+            {{ if .Params.photo }}
+              <div class="card-content">
+                <div class="image-box">
+                  <img src="{{ $imageCdn }}girls/{{ .Params.photo }}" alt="{{ .Title }}" class="main-image" />
+                </div>
+                <div class="profile-details">
+                  <h2 class="name">{{ .Title }}</h2>
+                  <div class="description">{{ .Content }}</div>
+                </div>
+              </div>
+              <div class="icon-box">
+                <img src="{{ $imageCdn }}girls/{{ .Params.photo }}" alt="{{ .Title }}" class="icon" />
+              </div>
+              <!-- Rotated title visible in default (inactive) state -->
+              <div class="rotated-title">{{ .Title }}</div>
+            {{ end }}
+          </div>
+        </a>
+      {{ end }}
     </div>
-  {{ end }}
+  </div>
 
   <div class="row">
     <div class="text-center">
       <br />
-      <p style="margin-bottom: 0px;">For more information on the programs we offer feel free to visit our National Girls Ministries website: <a href=https://ngm.ag.org/>https://ngm.ag.org/</a></p>
+      <p style="margin-bottom: 0px;">
+        For more information on the programs we offer feel free to visit our National Girls Ministries website:
+        <a href="https://ngm.ag.org/">https://ngm.ag.org/</a>
+      </p>
     </div>
   </div>
 </div>

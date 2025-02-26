@@ -639,7 +639,7 @@ ul.footer-menu li {
   padding-right: 0.5em;
   font-weight: bold;
   font-size: 14px;
-  line-height: 25px;
+  line-height: 1.5rem;
 }
 
 ul.footer-menu .sub-menu {
@@ -739,3 +739,4 @@ ul.footer-menu ul li {
 @import 'collapsible';
 @import 'carousel';
 @import 'events-toggle';
+@import 'girls';
