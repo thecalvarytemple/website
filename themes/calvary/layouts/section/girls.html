@@ -7,34 +7,52 @@
     </div>
   </div>
 
-  <div class="slide-container">
-    <div class="wrapper">
-      {{ $imageCdn := .Site.Params.imageCDN }}
-      {{ $pages := .Data.Pages.ByWeight }}
-      {{ range $i, $p := $pages }}
-        <!-- Each card gets a unique id -->
-        <a class="slide-card-link" href="#card{{ $i }}">
-          <div class="slide-card" id="card{{ $i }}" tabindex="0">
-            {{ if .Params.photo }}
-              <div class="card-content">
-                <div class="image-box">
-                  <img src="{{ $imageCdn }}girls/{{ .Params.photo }}" alt="{{ .Title }}" class="main-image" />
+  <div class="desktop-only">
+    <div class="slide-container">
+      <div class="wrapper">
+        {{ $imageCdn := .Site.Params.imageCDN }}
+        {{ $pages := .Data.Pages.ByWeight }}
+        {{ range $i, $p := $pages }}
+          <!-- Each card gets a unique id -->
+          <a class="slide-card-link" href="#card{{ $i }}" tabindex="0">
+            <div class="slide-card" id="card{{ $i }}" tabindex="0">
+              {{ if .Params.photo }}
+                <div class="card-content">
+                  <div class="image-box">
+                    <img src="{{ $imageCdn }}girls/{{ .Params.photo }}" alt="{{ .Title }}" class="main-image" />
+                  </div>
+                  <div class="profile-details">
+                    <h2 class="name">{{ .Title }}</h2>
+                    <div class="description">{{ .Content }}</div>
+                  </div>
                 </div>
-                <div class="profile-details">
-                  <h2 class="name">{{ .Title }}</h2>
-                  <div class="description">{{ .Content }}</div>
+                <div class="icon-box">
+                  <img src="{{ $imageCdn }}girls/{{ .Params.photo }}" alt="{{ .Title }}" class="icon" />
                 </div>
-              </div>
-              <div class="icon-box">
-                <img src="{{ $imageCdn }}girls/{{ .Params.photo }}" alt="{{ .Title }}" class="icon" />
-              </div>
-              <!-- Rotated title visible in default (inactive) state -->
-              <div class="rotated-title">{{ .Title }}</div>
-            {{ end }}
-          </div>
-        </a>
-      {{ end }}
+                <!-- Rotated title visible in default (inactive) state -->
+                <div class="rotated-title">{{ .Title }}</div>
+              {{ end }}
+            </div>
+          </a>
+        {{ end }}
+      </div>
     </div>
+  </div>
+
+  <div class="mobile-only">
+    {{ $imageCdn := .Site.Params.imageCDN }}
+    {{ $pages := .Data.Pages.ByWeight }}
+    {{ range $i, $p := $pages }}
+      <div class="card-content">
+        <div class="col-sm-12 col-md-6 gallery">
+          <h2>{{ .Title }}</h2>
+          {{ with $p.Params.photo }}
+            <img src="{{ print $imageCdn "girls/" . }}" style="max-width: 40%; float: right; margin-left: 15px; margin-bottom: 10px;" alt="{{ $p.Title }}" />
+          {{ end }}
+          <p>{{ .Content }}</p>
+        </div>
+      </div>
+    {{ end }}
   </div>
 
   <div class="row">
