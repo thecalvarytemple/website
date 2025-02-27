@@ -52,21 +52,6 @@
         transition: transform 0.3s ease;
       }
     }
-
-    .media-content {
-      .title {
-        font-size: 20px;
-        font-weight: 600;
-        color: #afc14b;
-        margin-bottom: 15px;
-      }
-
-      .description {
-        color: #9baa42;
-        font-size: 14px;
-        line-height: 1.5;
-      }
-    }
   }
 
   &:hover .image img {
@@ -75,7 +60,7 @@
 }
 
 .slide-container {
-  width: 95%;
+  width: 98%;
   padding: 40px 0;
   margin: 0 auto;
   position: relative;
