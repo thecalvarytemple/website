@@ -48,8 +48,7 @@
     background-color: rgba(0,0,0,.5);
     border-radius: 12px;
   }
-
-menu-hover:hover {
+  ul.menu li.open ul a:hover {
     display: block;
   }
 
