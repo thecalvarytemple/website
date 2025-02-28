@@ -49,6 +49,10 @@
     border-radius: 12px;
   }
 
+  #nav-menu ul.menu li.hover a {
+    display: block;
+  }
+
   #nav-menu ul.menu li.open a {
     color: #808080;
   }
