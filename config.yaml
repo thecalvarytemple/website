@@ -1,5 +1,5 @@
 ---
-baseURL: "http://example.org/"
+baseURL: ""
 title: "Calvary Temple"
 languageCode: "en-us"
 theme: "calvary"
