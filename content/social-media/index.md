@@ -5,7 +5,7 @@ layout: social-feeds
 header: social.jpg
 menu:
   main:
-    parent: 'About'
+    parent: 'About Us'
     weight: 15
 ---
 

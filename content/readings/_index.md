@@ -1,6 +1,6 @@
 ---
 date: "2025-01-04"
-title: Bible Reading Plan
+title: Reading Plan
 header: bible.jpg
 menu:
   main:

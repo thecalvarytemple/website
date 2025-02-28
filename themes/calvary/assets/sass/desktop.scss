@@ -21,8 +21,8 @@
   
   li .expand-arrow {
     background-image: url(https://cdn.thecalvarytemple.org/static/images/desktop-menu-contracted.png);
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
   }
 
   li.open .expand-arrow {
@@ -35,16 +35,18 @@
   }
 
   ul.menu li {
-    padding-left: 16px;
+    margin-right: 10px;
+    margin-left: 2px;
+    margin-top: 2px;
   }
 
   ul.menu ul li {
-    padding-left: 0px;
-    font-size: 11px;
+    font-size: 13px;
   }
 
   ul.menu li.open {
-    background-color: white;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 12px;
   }
 
   #nav-menu ul.menu li.open a {
@@ -54,22 +56,27 @@
   #nav-menu ul.menu li.open ul a {
     transition: background-color 0.5s linear;
     display: block;
-    background-color: white;
-    color: #808080;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    text-align: center;
     margin-bottom: 1px;
-    padding-left: 5px;
-    padding-right: 3px;
+    padding-left: 0px;
+    padding-right: 0px;
     padding-top: 3px;
   }
 
   #nav-menu ul.menu li.open ul a:hover {
     color: white;
-    background-color: #000000;
+    background-color: linear-gradient(45deg,rgba(255,255,255,0), rgba(0,0,0,.5));
+    border-radius: 12px;
     transition: background-color 0.5s linear;
   }
 
   #nav-menu ul.menu li.open ul li:hover a {
-    color: white;
+    color: rgb(35, 82, 126);
+    background-color: white;
+    border-radius: 12px;
   }
 
   ul.menu li.open ul {

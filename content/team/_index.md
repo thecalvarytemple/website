@@ -4,6 +4,6 @@ title: "Meet the Team"
 header: team.jpg
 menu:
   main:
-    parent: 'About'
+    parent: 'About Us' 
     weight: 15
 ---

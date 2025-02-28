@@ -4,7 +4,7 @@ title: "Services"
 header: what-to-expect.jpg
 menu:
   main:
-    parent: 'About'
+    parent: 'About Us'
     weight: 10
 ---
 

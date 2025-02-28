@@ -1,10 +1,10 @@
 ---
 date: "2019-02-10"
-title: What We Believe
+title: Our Beliefs
 header: what-we-believe.jpg
 menu:
   main:
-    parent: "About"
+    parent: "About Us"
     weight: 30
 ---
 

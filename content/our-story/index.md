@@ -4,7 +4,7 @@ title: Our Story
 header: our-story.jpg
 menu:
   main:
-    parent: "About"
+    parent: "About Us"
     weight: 29
 ---
 
