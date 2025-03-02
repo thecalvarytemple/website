@@ -14,6 +14,6 @@ resources:
 ---
 
 <div class="page-buttons">
-  <a href="https://calvarytemple.churchcenteronline.com/giving?open-in-church-center-modal=true">{{< img-retina "donate.png" >}}</a>
-  <a href="/volunteer/">{{< img-retina "volunteer.png" >}}</a>
+  <a role="button" href="https://calvarytemple.churchcenteronline.com/giving?open-in-church-center-modal=true">Donate</a>
+  <a role=button href="/volunteer/">Volunteer</a>
 </div>

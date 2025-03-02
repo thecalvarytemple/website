@@ -13,7 +13,8 @@ resources:
   src: button-daily-posts.png
 ---
 
+
 <div class="page-buttons">
-  <a href="groups/">{{< img-retina "groups.png" >}}</a>
+  <a role="button" href="/groups/">Groups</a>
 </div>
 

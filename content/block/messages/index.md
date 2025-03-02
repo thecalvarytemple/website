@@ -12,6 +12,6 @@ resources:
 ---
 
 <div class="page-buttons">
-  <a href="messages/">{{< img-retina "watch.png" >}}</a>
+  <a role="button" href="messages/">Watch</a>
 </div>
 
