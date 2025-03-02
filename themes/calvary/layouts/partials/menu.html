@@ -1,9 +1,16 @@
 <div class="header-container">
   {{ $imageCdn := .Site.Params.imageCDN}}
-  <div class="home-logo {{ .Params.logostyle }}">
-    <a href="{{ .Site.BaseURL }}">
+    <div class="home-logo {{ .Params.logostyle }}">
+    <div class="desktop-only">
+      <a href="{{ .Site.BaseURL }}">
       <img src="{{ $imageCdn }}header_logo-menu.png" /> 
     </a>
+    </div>
+    <div class="mobile-only">
+      <a href="{{ .Site.BaseURL }}">
+      <img src="{{ $imageCdn }}calvary-mobile-logo.png" style="height: 50px;width: 50px;background-color:#fff;border-radius: 50%;"/>
+    </a>
+    </div>
     <div class="find-us visible-xs-block visible-md-block visible-lg-block">
       SUNDAYS at 10:15am <br />
       WEDNESDAYS at 7pm
